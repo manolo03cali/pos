@@ -1,6 +1,7 @@
 # CodeIgniter 4
 /vendor/
 /writable/
+/config/Database/
 .env
 .phpunit.result.cache
 composer.lock
