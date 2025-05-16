@@ -1,0 +1,7 @@
+# CodeIgniter 4
+/vendor/
+/writable/
+.env
+.phpunit.result.cache
+composer.lock
+node_modules/  # Si usas herramientas frontend
