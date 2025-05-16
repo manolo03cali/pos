@@ -1,72 +1,62 @@
-# CodeIgniter 4 Framework
+## Sistema de Punto de Venta (POS) Web
 
-## What is CodeIgniter?
+_Desarrollado con CodeIgniter 4 + MySQL + Bootstrap_
+📌 Descripción del Proyecto
+Sistema de punto de venta web completo construido con CodeIgniter 4, que incluye:
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+Gestión de productos/inventario
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+Procesamiento de ventas y transacciones
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+Reportes y análisis de ventas
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+Control de usuarios y permisos
 
-## Important Change with index.php
+🚀 Tecnologías Principales
+Componente Versión/Detalle
+Backend CodeIgniter 4 (PHP 8.1+)
+Base de Datos MySQL 8.x
+Frontend Bootstrap 4.5 + jQuery UI 1.13
+Librerías SB Admin 7.0.7, SweetAlert2
+⚙️ Requisitos del Servidor
+PHP ≥ 8.1 con extensiones: intl, mbstring, mysqlnd, json
 
-`index.php` is no longer in the root of the project! It has been moved inside the _public_ folder,
-for better security and separation of components.
+MySQL ≥ 5.7 o MariaDB ≥ 10.3
 
-This means that you should configure your web server to "point" to your project's _public_ folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter _public/..._, as the rest of your logic and the
-framework are exposed.
+Composer (para dependencias)
 
-**Please** read the user guide for a better explanation of how CI4 works!
+Servidor web (Apache/Nginx) configurado con:
 
-## Repository Management
+apache
+DocumentRoot "/ruta/al/proyecto/public"
+🔧 Instalación
+Clonar repositorio:
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+bash
+git clone https://github.com/tu-usuario/tu-pos-ci4.git
+cd tu-pos-ci4
+Instalar dependencias:
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+bash
+composer install
+Configurar entorno:
 
-## Contributing
+bash
+cp env .env
+nano .env # Editar credenciales de DB y configuraciones
+Migrar base de datos:
 
-We welcome contributions from the community.
+bash
+php spark migrate --all
+🌟 Características Clave
+Interfaz responsive con SB Admin Dashboard
 
-Please read the [_Contributing to CodeIgniter_](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
+Ventas rápidas con búsqueda AJAX de productos
 
-## Server Requirements
+Reportes en tiempo real con gráficos interactivos
 
-PHP version 8.1 or higher is required, with the following extensions installed:
+Multi-usuario con roles y permisos
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+Notificaciones con SweetAlert2
 
-> [!WARNING]
->
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-
-## Punto de venta web
-
-Punto de venta web realizado en php codeigniter 4 y mysql.
-
-## Librerias
-
-- Bootstrap v4.5.2 (https://getbootstrap.com/)
-  /\*! jQuery UI - v1.13.3 - 2024-07-22
-  Start Bootstrap - SB Admin v7.0.7
-  sweetalert2
+📚
